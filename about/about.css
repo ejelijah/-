@@ -1,12 +1,12 @@
 html,body{
-    font-family: "Courier New", Courier, monospace;
-    margin: 0;
-    padding: 0;
     height: 100vh;
+    margin: 0;
+    padding: 0 ;
+    background: linear-gradient(to bottom right, #000000,darkgray);
+    font-family: "italic, sans-serif";
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
-    background:linear-gradient(to bottom, rgb(255, 255, 255),black);
 }
 
 .div1 {
@@ -18,17 +18,15 @@ html,body{
     margin: 0; 
     width: 100%; 
     box-sizing: border-box; 
-    animation: fadeInSlide 2s ease-out; 
     background-color: #000000;
 }
-@keyframes fadeInSlideUp {
+@keyframes fadeIn {
     0% {
         opacity: 0; /* Start fully transparent */
-        transform: translateY(50px); /* Start slightly below its position */
+        transform: scale(1); /* Start smaller for pop-in effect */
     }
     100% {
         opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Back to its original position */
     }
 }
 
@@ -37,7 +35,22 @@ html,body{
     padding-bottom: 20px;
     color: white;
     margin-right: auto;
-    animation: fadeInSlide 2s ease-out; /* Apply the animation */
+    animation: fadeIn 2s ease-in;
+    margin-left: 10px;
+}
+.p1{
+    font-size: medium;
+    color: white;
+    margin-right: auto;
+    animation: fadeIn 3s ease-in; 
+    margin-left: 10px;
+}
+.h2{
+    padding-bottom: 20px;
+    color: white;
+    margin-right: auto;
+    animation: fadeIn 2s ease-in; 
+    margin-left: 10px;
 }
 
 .hamburger-menu span {
@@ -47,6 +60,7 @@ html,body{
     background-color: white; /* Line color */
     border-radius: 2px; /* Slightly round the edges */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
+    animation: fadeIn 4s ease-in; /* Apply the animation */
 }
 
 /* Hover effect for the hamburger menu */

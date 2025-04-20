@@ -17,7 +17,6 @@ html,body{
     margin: 0; 
     width: 100%; 
     box-sizing: border-box; 
-    animation: fadeInSlide 2s ease-out; 
     background-color: #000000;
 }
 @keyframes fadeInSlideUp {
@@ -33,6 +32,7 @@ html,body{
 @keyframes fadeIn{
     0% {
         opacity: 0; /* Start fully transparent */
+        transform: scale(1); /* Start smaller for pop-in effect */
     }
     100% {
         opacity: 1; /* Fully visible */
@@ -70,5 +70,5 @@ html,body{
     flex-direction: column; /* Stack the lines vertically */
     justify-content: space-between; /* Evenly space the lines */
     cursor: pointer; /* Change cursor to pointer on hover */
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 4s ease-in; /* Apply the animation */
 }

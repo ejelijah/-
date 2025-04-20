@@ -1,10 +1,31 @@
-html,body {
-    background: linear-gradient(to top, black, #737373);
-    font-family: italic "Courier New", Courier, monospace; /* Use a monospaced font */
-    margin: 0; 
-    padding: 0; 
+html,body{
     height: 100vh;
+    margin: 0;
+    padding: 0 ;
+    background: linear-gradient(to bottom right, #000000,darkgray);
+    font-family: "italic, sans-serif";
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(50px); /* Start slightly below its position */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Back to its original position */
+    }
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: scale(1); /* Start smaller for pop-in effect */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
 }
 
 /* Hamburger menu container */
@@ -28,6 +49,7 @@ html,body {
     background-color: white; /* Line color */
     border-radius: 2px; /* Slightly round the edges */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
+    animation: fadeIn 4s ease-in;
 }
 
 /* Hover effect for the hamburger menu */
@@ -40,7 +62,7 @@ html,body {
     padding-bottom: 20px;
     color: white;
     margin-right: auto;
-    animation: fadeInSlide 2s ease-out; /* Apply the animation */
+    animation: fadeIn 4s ease-in;
 }
 
 .container{
@@ -51,13 +73,14 @@ padding-left: 0.5px;
     font-size: 2.2em;
     margin-bottom: 20px;
     color: white;
+    animation: fadeIn 4s ease-in;
 }
 .p2{
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 20px;
     color: white;
-    animation : fadeInSlide 2s ease-out; /
+    animation: fadeIn 4s ease-in;
 }
 .p3{
     text-align: center;
@@ -69,26 +92,18 @@ padding-left: 0.5px;
     text-align: center;
     font-size: 1.2em;
     margin: 20px auto;
+    margin-left: 20px;
     color: #FFFFFF;
+    background-color: gray;
     background-color: #737373;
     border: 2px solid #A9A9A9;
+
+
     border-radius: 12px;
     padding: 10px 20px;
     cursor: pointer;
     display: inline-block;
-    animation: fadeInSlideUp 2s ease-out; /* Apply the animation */
-}
-
-/* Define the animation */
-@keyframes fadeInSlideUp {
-    0% {
-        opacity: 0; /* Start fully transparent */
-        transform: translateY(50px); /* Start slightly below its position */
-    }
-    100% {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Back to its original position */
-    }
+    animation: fadeInSlideUp 2s ease-out; 
 }
 
 .b1:hover {
@@ -105,14 +120,12 @@ padding-left: 0.5px;
     margin: 0; 
     width: 100%; 
     box-sizing: border-box; 
-    animation: fadeInSlide 2s ease-out; 
     background-color: #000000;
 }
 .div2{
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 0px;
-    animation: fadeInSlide 2s ease-out; 
 }
 .div3{
     background-color: #000000;
